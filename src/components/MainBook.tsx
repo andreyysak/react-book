@@ -16,7 +16,7 @@ export const MainPizza: React.FC<Props> = ({books}) => {
         <Genres genres={genres} />
         <SortBtn />
       </div>
-      <Catalog />
+      <Catalog books={books} />
     </section>
   )
 }

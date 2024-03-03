@@ -6,7 +6,7 @@ export const CatalogInput = () => {
       <input 
         type="text"
         placeholder='Write smt...'
-        className='bg-lightGray w-72 h-12 rounded-full border-bgInline border-2 px-5'
+        className='w-72 h-12 rounded-full border-bgInline border-2 px-5'
       />
     </div>
   )

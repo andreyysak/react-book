@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Header } from "./components/Header";
-import { MainPizza } from "./components/MainPizza";
+import { MainPizza } from "./components/MainBook";
 import booksFromServer from './api/books.json';
 
 function App() {

@@ -1,250 +1,128 @@
 [
   {
+    "id": 1,
     "name": "The Great Gatsby",
     "description": "A novel about the American Dream during the Roaring Twenties.",
     "genre": "Fiction",
     "author": "F. Scott Fitzgerald",
     "price": 15.99,
-    "imageUrl": "https://example.com/great-gatsby-cover.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/81QuEGw8VPL._AC_UF1000,1000_QL80_.jpg"
   },
   {
+    "id": 2,
     "name": "To Kill a Mockingbird",
     "description": "A classic novel exploring racial injustice in the American South.",
     "genre": "Fiction",
     "author": "Harper Lee",
     "price": 12.49,
-    "imageUrl": "https://example.com/to-kill-a-mockingbird-cover.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNmVmYzcwNzMtMWM1NS00MWIyLThlMDEtYzUwZDgzODE1NmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
   },
   {
+    "id": 3,
     "name": "The Hobbit",
     "description": "An adventure novel set in the fantasy world of Middle-earth.",
     "genre": "Fantasy",
     "author": "J.R.R. Tolkien",
     "price": 18.99,
-    "imageUrl": "https://example.com/the-hobbit-cover.jpg"
+    "imageUrl": "https://static.yakaboo.ua/media/catalog/product/7/1/7103gcfdgdl.jpg"
   },
   {
+    "id": 4,
     "name": "1984",
     "description": "A dystopian novel by George Orwell depicting a totalitarian society.",
     "genre": "Fiction",
     "author": "George Orwell",
     "price": 14.99,
-    "imageUrl": "https://example.com/1984-cover.jpg"
+    "imageUrl": "https://anylang.net/sites/default/files/covers/1984.jpg"
   },
   {
+    "id": 5,
     "name": "The Catcher in the Rye",
     "description": "A coming-of-age novel by J.D. Salinger.",
     "genre": "Fiction",
     "author": "J.D. Salinger",
     "price": 11.99,
-    "imageUrl": "https://example.com/catcher-in-the-rye-cover.jpg"
+    "imageUrl": "https://static.yakaboo.ua/media/catalog/product/9/7/9780241984758.jpg"
   },
   {
+    "id": 6,
     "name": "Pride and Prejudice",
     "description": "A classic novel by Jane Austen exploring love and societal expectations.",
     "genre": "Fiction",
     "author": "Jane Austen",
     "price": 16.99,
-    "imageUrl": "https://example.com/pride-and-prejudice-cover.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/91bckGWvmlL._AC_UF894,1000_QL80_.jpg"
   },
   {
+    "id": 7,
     "name": "The Lord of the Rings",
     "description": "An epic fantasy trilogy by J.R.R. Tolkien.",
     "genre": "Fantasy",
     "author": "J.R.R. Tolkien",
     "price": 29.99,
-    "imageUrl": "https://example.com/lotr-cover.jpg"
+    "imageUrl": "https://harpercollins.co.uk/cdn/shop/products/x500_84835909-8631-491a-964e-c14a30f59e54.jpg?v=1709025234&width=350"
   },
   {
+    "id": 8,
     "name": "Harry Potter and the Philosopher's Stone",
     "description": "The first book in the Harry Potter series by J.K. Rowling.",
     "genre": "Fantasy",
     "author": "J.K. Rowling",
     "price": 22.99,
-    "imageUrl": "https://example.com/harry-potter-1-cover.jpg"
+    "imageUrl": "https://content2.rozetka.com.ua/goods/images/original/72555843.jpg"
   },
   {
+    "id": 9,
     "name": "Moby-Dick",
     "description": "A novel by Herman Melville about Captain Ahab's quest for the white whale.",
     "genre": "Fiction",
     "author": "Herman Melville",
     "price": 17.99,
-    "imageUrl": "https://example.com/moby-dick-cover.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/I/51aV053NRjL._AC_UF1000,1000_QL80_.jpg"
   },
   {
+    "id": 10,
     "name": "The Da Vinci Code",
     "description": "A mystery thriller novel by Dan Brown.",
     "genre": "Mystery",
     "author": "Dan Brown",
     "price": 21.99,
-    "imageUrl": "https://example.com/da-vinci-code-cover.jpg"
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1463592438i/30228538.jpg"
   },
   {
+    "id": 11,
     "name": "Brave New World",
     "description": "A dystopian novel by Aldous Huxley.",
     "genre": "Fiction",
     "author": "Aldous Huxley",
     "price": 13.99,
-    "imageUrl": "https://example.com/brave-new-world-cover.jpg"
+    "imageUrl": "https://static.yakaboo.ua/media/catalog/product/9/7/9780099477464.jpg"
   },
   {
+    "id": 12,
     "name": "The Shining",
     "description": "A horror novel by Stephen King.",
     "genre": "Horror",
     "author": "Stephen King",
     "price": 18.49,
-    "imageUrl": "https://example.com/the-shining-cover.jpg"
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
   },
   {
+    "id": 13,
     "name": "The Girl with the Dragon Tattoo",
     "description": "A psychological thriller novel by Stieg Larsson.",
     "genre": "Thriller",
     "author": "Stieg Larsson",
     "price": 15.99,
-    "imageUrl": "https://example.com/girl-with-dragon-tattoo-cover.jpg"
+    "imageUrl": "https://static.yakaboo.ua/media/catalog/product/9/1/91ql_aal3l.jpg"
   },
   {
+    "id": 14,
     "name": "The Hitchhiker's Guide to the Galaxy",
     "description": "A comedic science fiction series by Douglas Adams.",
     "genre": "Science Fiction",
     "author": "Douglas Adams",
     "price": 14.99,
-    "imageUrl": "https://example.com/hitchhikers-guide-cover.jpg"
-  },
-  {
-    "name": "Fahrenheit 451",
-    "description": "A dystopian novel by Ray Bradbury about a society where books are banned.",
-    "genre": "Fiction",
-    "author": "Ray Bradbury",
-    "price": 16.99,
-    "imageUrl": "https://example.com/fahrenheit-451-cover.jpg"
-  },
-  {
-    "name": "The Chronicles of Narnia",
-    "description": "A series of seven high fantasy novels by C.S. Lewis.",
-    "genre": "Fantasy",
-    "author": "C.S. Lewis",
-    "price": 26.99,
-    "imageUrl": "https://example.com/narnia-cover.jpg"
-  },
-  {
-    "name": "Sapiens: A Brief History of Humankind",
-    "description": "A non-fiction book by Yuval Noah Harari exploring the history of Homo sapiens.",
-    "genre": "Non-Fiction",
-    "author": "Yuval Noah Harari",
-    "price": 20.99,
-    "imageUrl": "https://example.com/sapiens-cover.jpg"
-  },
-  {
-    "name": "The Alchemist",
-    "description": "A philosophical novel by Paulo Coelho.",
-    "genre": "Fiction",
-    "author": "Paulo Coelho",
-    "price": 12.99,
-    "imageUrl": "https://example.com/the-alchemist-cover.jpg"
-  },
-  {
-    "name": "The Hunger Games",
-    "description": "A dystopian novel by Suzanne Collins.",
-    "genre": "Science Fiction",
-    "author": "Suzanne Collins",
-    "price": 17.49,
-    "imageUrl": "https://example.com/hunger-games-cover.jpg"
-  },
-  {
-    "name": "The Road",
-    "description": "A post-apocalyptic novel by Cormac McCarthy.",
-    "genre": "Fiction",
-    "author": "Cormac McCarthy",
-    "price": 15.99,
-    "imageUrl": "https://example.com/the-road-cover.jpg"
-  },
-  {
-    "name": "The Color Purple",
-    "description": "A novel by Alice Walker exploring racism and sexism in the American South.",
-    "genre": "Fiction",
-    "author": "Alice Walker",
-    "price": 14.99,
-    "imageUrl": "https://example.com/the-color-purple-cover.jpg"
-  },
-  {
-    "name": "The Grapes of Wrath",
-    "description": "A novel by John Steinbeck depicting the struggles of migrant workers during the Great Depression.",
-    "genre": "Fiction",
-    "author": "John Steinbeck",
-    "price": 16.99,
-    "imageUrl": "https://example.com/grapes-of-wrath-cover.jpg"
-  },
-  {
-    "name": "One Hundred Years of Solitude",
-    "description": "A landmark novel by Gabriel García Márquez.",
-    "genre": "Magical Realism",
-    "author": "Gabriel García Márquez",
-    "price": 19.99,
-    "imageUrl": "https://example.com/one-hundred-years-cover.jpg"
-  },
-  {
-    "name": "Wuthering Heights",
-    "description": "A classic novel by Emily Brontë.",
-    "genre": "Gothic Fiction",
-    "author": "Emily Brontë",
-    "price": 13.99,
-    "imageUrl": "https://example.com/wuthering-heights-cover.jpg"
-  },
-  {
-    "name": "The Silence of the Lambs",
-    "description": "A psychological horror novel by Thomas Harris.",
-    "genre": "Horror",
-    "author": "Thomas Harris",
-    "price": 18.99,
-    "imageUrl": "https://example.com/silence-of-the-lambs-cover.jpg"
-  },
-  {
-    "name": "The Odyssey",
-    "description": "An ancient Greek epic poem attributed to Homer.",
-    "genre": "Epic Poetry",
-    "author": "Homer",
-    "price": 12.99,
-    "imageUrl": "https://example.com/the-odyssey-cover.jpg"
-  },
-  {
-    "name": "Frankenstein",
-    "description": "A Gothic novel by Mary Shelley.",
-    "genre": "Gothic Fiction",
-    "author": "Mary Shelley",
-    "price": 14.99,
-    "imageUrl": "https://example.com/frankenstein-cover.jpg"
-  },
-  {
-    "name": "The Stand",
-    "description": "A post-apocalyptic horror novel by Stephen King.",
-    "genre": "Horror",
-    "author": "Stephen King",
-    "price": 21.99,
-    "imageUrl": "https://example.com/the-stand-cover.jpg"
-  },
-  {
-    "name": "A Game of Thrones",
-    "description": "The first book in the A Song of Ice and Fire series by George R.R. Martin.",
-    "genre": "Fantasy",
-    "author": "George R.R. Martin",
-    "price": 24.99,
-    "imageUrl": "https://example.com/game-of-thrones-cover.jpg"
-  },
-  {
-    "name": "Crime and Punishment",
-    "description": "A novel by Fyodor Dostoevsky exploring morality and redemption.",
-    "genre": "Fiction",
-    "author": "Fyodor Dostoevsky",
-    "price": 16.99,
-    "imageUrl": "https://example.com/crime-and-punishment-cover.jpg"
-  },
-  {
-    "name": "The Picture of Dorian Gray",
-    "description": "A philosophical novel by Oscar Wilde.",
-    "genre": "Gothic Fiction",
-    "author": "Oscar Wilde",
-    "price": 15.99,
-    "imageUrl": "https://example.com/dorian-gray-cover.jpg"
+    "imageUrl": "https://static.yakaboo.ua/media/catalog/product/i/m/img_43004.jpg"
   }
 ]
