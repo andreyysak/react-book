@@ -14,9 +14,10 @@ interface Props {
   setGenre: Dispatch<SetStateAction<string>>;
   query: string;
   setQuery: Dispatch<SetStateAction<string>>;
+  addToCart: (book: Book) => void;
 }
 
-export const MainBook: React.FC<Props> = ({books, sort, setSort, reverse, setReverse, genre, setGenre, query, setQuery}) => {  
+export const MainBook: React.FC<Props> = ({books, sort, setSort, reverse, setReverse, genre, setGenre, query, setQuery, addToCart}) => {  
   return (
     <section className='py-10 px-14 bg-white rounded-b-lg'>
       <div className='flex justify-between items-center'>
@@ -35,6 +36,7 @@ export const MainBook: React.FC<Props> = ({books, sort, setSort, reverse, setRev
         books={books}
         query={query}
         setQuery={setQuery}
+        addToCart={addToCart}
       />
     </section>
   )

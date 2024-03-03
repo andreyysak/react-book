@@ -5,6 +5,8 @@ import booksFromServer from './api/books.json';
 import { Book } from "./interface/Books";
 
 import {SORT_BY_ALPHABET, SORT_BY_LENGTH} from './constants/constants';
+import { CartItems } from "./components/CartItems";
+import { NewBook } from "./components/NewBook";
 
 function getBooks(books: Book[], sort: string, reverse: boolean, query: string, genre: string) {
   const preparedBooks = [...books];
@@ -46,13 +48,37 @@ function App() {
   const [reverse, setReverse] = useState(false);
   const [query, setQuery] = useState('');
   const [genre, setGenre] = useState('');
+  const [cart, setCart] = useState<Book[]>([]);
+  const [showCart, setShowCart] = useState(false);
+  const [count, setCount] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [showNewBook, setShowNewBook] = useState(false);
 
   const books = getBooks(booksFromServer, sort, reverse, query, genre)
+
+  const addToCart = (book: Book) => {
+    setCart(prevCart => [...prevCart ,book]);
+    setCount(count => count + 1);
+    setTotalPrice(totalPrice => totalPrice + book.price)
+  }
+
+  const handleOpenCart = () => {
+    setShowCart(cur => !cur)
+  }
+
+  const handleOpenAddNewBook = () => {
+    setShowNewBook(cur => !cur)
+  }
 
   return (
     <div className="App">
       <div className="p-12 bg-bgInline rounded-sm">
-        <Header />
+        <Header
+          count={count}
+          totalPrice={totalPrice}
+          handleOpenCart={handleOpenCart}
+          handleOpenAddNewBook={handleOpenAddNewBook}
+        />
         <MainBook 
           books={books}
           sort={sort} 
@@ -63,8 +89,20 @@ function App() {
           setGenre={setGenre}
           query={query}
           setQuery={setQuery}
+          addToCart={addToCart}
         />
       </div>
+
+      {showCart && <CartItems
+        cart={cart}
+        handleOpenCart={handleOpenCart}
+        count={count}
+        setCount={setCount}
+      />}
+
+      {showNewBook && <NewBook 
+        handleOpenAddNewBook={handleOpenAddNewBook}
+      />}
     </div>
   );
 }

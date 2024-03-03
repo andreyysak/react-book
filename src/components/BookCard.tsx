@@ -4,9 +4,10 @@ import { TiPlus } from "react-icons/ti";
 
 interface Props {
   book: Book;
+  addToCart: (book: Book) => void;
 }
 
-export const BookCard: React.FC<Props> = ({book}) => {
+export const BookCard: React.FC<Props> = ({book, addToCart}) => {
   return (
     <li 
       key={book.id}
@@ -32,7 +33,10 @@ export const BookCard: React.FC<Props> = ({book}) => {
         <p className='font-bold text-2xl'>
           {`${book.price}$`}
         </p>
-        <button className='flex gap-1 py-3 px-4 items-center text-base font-bold text-orangeText border-orangeText border-2 rounded-full hover:bg-orangeText hover:text-white'>
+        <button 
+          className='flex gap-1 py-3 px-4 items-center text-base font-bold text-orangeText border-orangeText border-2 rounded-full hover:bg-orangeText hover:text-white'
+          onClick={() => addToCart(book)}
+        >
           <TiPlus size={22} />
           Add
         </button>

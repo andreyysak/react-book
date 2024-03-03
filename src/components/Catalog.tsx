@@ -7,9 +7,10 @@ interface Props {
   books: Book[];
   query: string;
   setQuery: Dispatch<SetStateAction<string>>;
+  addToCart: (book: Book) => void;
 }
 
-export const Catalog: React.FC<Props> = ({books, query, setQuery}) => {
+export const Catalog: React.FC<Props> = ({books, query, setQuery, addToCart}) => {
   return (
     <section className='py-10 bg-white '>
       <div className='flex justify-between items-center pb-9'>
@@ -19,7 +20,10 @@ export const Catalog: React.FC<Props> = ({books, query, setQuery}) => {
           setQuery={setQuery}
         />
       </div>
-      <BookList books={books} />
+      <BookList 
+        books={books}
+        addToCart={addToCart}
+      />
     </section>
   )
 }
