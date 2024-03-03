@@ -2,8 +2,7 @@ import React from 'react'
 import { CiShoppingCart, CiDollar } from "react-icons/ci";
 import { FaBookOpen } from "react-icons/fa";
 
-
-export const Header: React.FC = () => {
+export const Header = () => {
   return (
     <header className='flex justify-between items-center py-10 px-14 bg-white rounded-t-lg font-bold border-b-2'>
       <figure>
@@ -19,11 +18,17 @@ export const Header: React.FC = () => {
       <ul className='flex list-none gap-7 bg-orangeCol text-white py-4 px-6 rounded-full'>
         <li className='flex gap-2 pr-5 border-r-2'>
           <label htmlFor="">0</label>
-          <CiDollar size={26} />
+          <CiDollar 
+            size={26} 
+            style={{ strokeWidth: "1"}} 
+          />
         </li>
         <li className='flex gap-2'>
           <label htmlFor="">0</label>
-          <CiShoppingCart size={26} />
+          <CiShoppingCart 
+            size={26} 
+            style={{ strokeWidth: "1"}} 
+          />
         </li>
       </ul>
     </header>
