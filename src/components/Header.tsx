@@ -3,9 +3,9 @@ import { CiShoppingCart, CiDollar } from "react-icons/ci";
 import { FaBookOpen } from "react-icons/fa";
 
 
-export const Header = () => {
+export const Header: React.FC = () => {
   return (
-    <header className='flex justify-between items-center py-10 px-14 bg-white rounded-lg font-bold border-b-2'>
+    <header className='flex justify-between items-center py-10 px-14 bg-white rounded-t-lg font-bold border-b-2'>
       <figure>
         <a 
           href="www.google.com"

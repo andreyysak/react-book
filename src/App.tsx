@@ -1,11 +1,16 @@
-import React from 'react';
-import { Header } from './components/Header';
+import React, { useState } from "react";
+import { Header } from "./components/Header";
+import { MainPizza } from "./components/MainPizza";
+import booksFromServer from './api/books.json';
 
 function App() {
+  const [books, setBooks] = useState(booksFromServer);
+
   return (
     <div className="App">
-      <div className='p-12 bg-bgInline rounded-sm'>
+      <div className="p-12 bg-bgInline rounded-sm">
         <Header />
+        <MainPizza books={books} />
       </div>
     </div>
   );
