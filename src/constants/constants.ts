@@ -6,6 +6,12 @@ export const genres = [
   "Horror",
 ];
 
+export const sortBtn = [
+  "Alphabet",
+  "Price",
+  "Reverse",
+]
+
 // export const genres = [
 //   "Fiction",
 //   "Fantasy",

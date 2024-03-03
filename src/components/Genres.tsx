@@ -1,5 +1,5 @@
 import React from 'react'
-import { Book } from '../interface/Books';
+// import { Book } from '../interface/Books';
 
 interface Props {
   genres: string[];
