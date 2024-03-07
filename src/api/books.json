@@ -1,5 +1,6 @@
 [
   {
+    "amount": 1,
     "id": 1,
     "name": "The Great Gatsby",
     "description": "A novel about the American Dream during the Roaring Twenties.",
@@ -9,6 +10,7 @@
     "imageUrl": "https://m.media-amazon.com/images/I/81QuEGw8VPL._AC_UF1000,1000_QL80_.jpg"
   },
   {
+    "amount": 1,
     "id": 2,
     "name": "To Kill a Mockingbird",
     "description": "A classic novel exploring racial injustice in the American South.",
@@ -18,6 +20,7 @@
     "imageUrl": "https://m.media-amazon.com/images/M/MV5BNmVmYzcwNzMtMWM1NS00MWIyLThlMDEtYzUwZDgzODE1NmE2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg"
   },
   {
+    "amount": 1,
     "id": 3,
     "name": "The Hobbit",
     "description": "An adventure novel set in the fantasy world of Middle-earth.",
@@ -27,6 +30,7 @@
     "imageUrl": "https://static.yakaboo.ua/media/catalog/product/7/1/7103gcfdgdl.jpg"
   },
   {
+    "amount": 1,
     "id": 4,
     "name": "1984",
     "description": "A dystopian novel by George Orwell depicting a totalitarian society.",
@@ -36,6 +40,7 @@
     "imageUrl": "https://anylang.net/sites/default/files/covers/1984.jpg"
   },
   {
+    "amount": 1,
     "id": 5,
     "name": "The Catcher in the Rye",
     "description": "A coming-of-age novel by J.D. Salinger.",
@@ -45,15 +50,17 @@
     "imageUrl": "https://static.yakaboo.ua/media/catalog/product/9/7/9780241984758.jpg"
   },
   {
+    "amount": 1,
     "id": 6,
     "name": "Pride and Prejudice",
     "description": "A classic novel by Jane Austen exploring love and societal expectations.",
     "genre": "Fiction",
     "author": "Jane Austen",
     "price": 16.99,
-    "imageUrl": "https://m.media-amazon.com/images/I/91bckGWvmlL._AC_UF894,1000_QL80_.jpg"
+    "imageUrl": "https://canonpress.com/cdn/shop/products/canon-classics-books-pride-and-prejudice-28066983542832.jpg?v=1616217720"
   },
   {
+    "amount": 1,
     "id": 7,
     "name": "The Lord of the Rings",
     "description": "An epic fantasy trilogy by J.R.R. Tolkien.",
@@ -63,6 +70,7 @@
     "imageUrl": "https://harpercollins.co.uk/cdn/shop/products/x500_84835909-8631-491a-964e-c14a30f59e54.jpg?v=1709025234&width=350"
   },
   {
+    "amount": 1,
     "id": 8,
     "name": "Harry Potter and the Philosopher's Stone",
     "description": "The first book in the Harry Potter series by J.K. Rowling.",
@@ -72,6 +80,7 @@
     "imageUrl": "https://content2.rozetka.com.ua/goods/images/original/72555843.jpg"
   },
   {
+    "amount": 1,
     "id": 9,
     "name": "Moby-Dick",
     "description": "A novel by Herman Melville about Captain Ahab's quest for the white whale.",
@@ -81,6 +90,7 @@
     "imageUrl": "https://m.media-amazon.com/images/I/51aV053NRjL._AC_UF1000,1000_QL80_.jpg"
   },
   {
+    "amount": 1,
     "id": 10,
     "name": "The Da Vinci Code",
     "description": "A mystery thriller novel by Dan Brown.",
@@ -90,6 +100,7 @@
     "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1463592438i/30228538.jpg"
   },
   {
+    "amount": 1,
     "id": 11,
     "name": "Brave New World",
     "description": "A dystopian novel by Aldous Huxley.",
@@ -99,6 +110,7 @@
     "imageUrl": "https://static.yakaboo.ua/media/catalog/product/9/7/9780099477464.jpg"
   },
   {
+    "amount": 1,
     "id": 12,
     "name": "The Shining",
     "description": "A horror novel by Stephen King.",
@@ -108,6 +120,7 @@
     "imageUrl": "https://m.media-amazon.com/images/M/MV5BZWFlYmY2MGEtZjVkYS00YzU4LTg0YjQtYzY1ZGE3NTA5NGQxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_FMjpg_UX1000_.jpg"
   },
   {
+    "amount": 1,
     "id": 13,
     "name": "The Girl with the Dragon Tattoo",
     "description": "A psychological thriller novel by Stieg Larsson.",
@@ -117,6 +130,7 @@
     "imageUrl": "https://static.yakaboo.ua/media/catalog/product/9/1/91ql_aal3l.jpg"
   },
   {
+    "amount": 1,
     "id": 14,
     "name": "The Hitchhiker's Guide to the Galaxy",
     "description": "A comedic science fiction series by Douglas Adams.",

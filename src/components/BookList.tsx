@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Book } from '../interface/Books'
 import { BookCard } from './BookCard';
 
 interface Props {
   books: Book[];
-  addToCart: (book: Book) => void;
+  handleClick: (book: Book) => void;
 }
 
-export const BookList: React.FC<Props> = ({books, addToCart}) => {
+export const BookList: React.FC<Props> = ({books, handleClick}) => {
   return (
-    <ul className='grid grid-cols-4 justify-between gap-y-16'>
-      {books.map(book => (
-        <BookCard 
+    <ul 
+      className='bg-white rounded-b-xl grid grid-cols-4 gap-y-5 justify-items-center py-10'
+    >
+        {books.map(book => (
+        <BookCard
           book={book}
-          addToCart={addToCart}
+          addToCart={handleClick}
+          key={book.id}
         />
       ))}
     </ul>

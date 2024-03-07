@@ -1,6 +1,6 @@
 import React from 'react'
 import { Book } from '../interface/Books'
-import { TiPlus } from "react-icons/ti";
+import { GrFormAdd } from "react-icons/gr";
 
 interface Props {
   book: Book;
@@ -9,35 +9,27 @@ interface Props {
 
 export const BookCard: React.FC<Props> = ({book, addToCart}) => {
   return (
-    <li 
+    <li
       key={book.id}
-      className='w-[280px]'
+      className='w-[230px]'
     >
       <img 
-        src={book.imageUrl} 
+        src={book.imageUrl}
         alt={book.name}
-        className='h-[459px] rounded-xl'
+        className='rounded-xl h-[325px]'
       />
-      <h4 className='text-xl font-extrabold pt-3 pb-5 text-center'>
+      <h3 className='pt-6 font-bold text-xl text-center'>
         {book.name}
-      </h4>
-
-      <p className='font-medium text-base'>
-        {`Genre: ${book.genre}`}
-      </p>
-      <p className='font-medium text-base pb-4'>
-        {`Author: ${book.author}`}
-      </p>
-      
-      <div className='flex justify-between items-center'>
-        <p className='font-bold text-2xl'>
+      </h3>
+      <div className='flex justify-between items-center pt-3'>
+        <p className='font-bold text-lg'>
           {`${book.price}$`}
         </p>
-        <button 
-          className='flex gap-1 py-3 px-4 items-center text-base font-bold text-orangeText border-orangeText border-2 rounded-full hover:bg-orangeText hover:text-white'
+        <button
+          className='flex gap-2 items-center font-bold text-base text-white bg-orangeCol px-4 py-2 rounded-full hover:text-dark'
           onClick={() => addToCart(book)}
         >
-          <TiPlus size={22} />
+          <GrFormAdd size={20} />
           Add
         </button>
       </div>

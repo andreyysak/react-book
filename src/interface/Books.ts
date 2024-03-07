@@ -6,4 +6,10 @@ export interface Book {
   author: string;
   price: number;
   imageUrl: string;
+  amount: number;
+}
+
+export interface CartItem {
+  book: Book;
+  count: number;
 }

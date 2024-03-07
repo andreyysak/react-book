@@ -1,16 +1,18 @@
-import React, { useState } from "react";
-import { Header } from "./components/Header";
-import { MainBook } from "./components/MainBook";
-import booksFromServer from './api/books.json';
+import React, { useEffect, useMemo, useState } from "react";
+import booksFromServer from "./api/books.json";
 import { Book } from "./interface/Books";
 
-import {SORT_BY_ALPHABET, SORT_BY_LENGTH} from './constants/constants';
-import { CartItems } from "./components/CartItems";
-import { NewBook } from "./components/NewBook";
+import { SORT_BY_ALPHABET, SORT_BY_LENGTH } from "./constants/constants";
+import { BookList } from "./components/BookList";
+import { Cart } from "./components/Cart";
+import { Header } from "./components/Header";
 
-function getBooks(books: Book[], sort: string, reverse: boolean, query: string, genre: string) {
+function getBooks(
+  books: Book[],
+  sort: string,
+  reverse: boolean,
+) {
   const preparedBooks = [...books];
-  const queryValue = query.trim().toLowerCase();
 
   if (sort) {
     preparedBooks.sort((book1, book2) => {
@@ -22,87 +24,64 @@ function getBooks(books: Book[], sort: string, reverse: boolean, query: string, 
         default:
           return 0;
       }
-    })
+    });
   }
 
   if (reverse) {
     preparedBooks.reverse();
   }
 
-  const filteredBooks = preparedBooks.filter(book =>
-    book.name.trim().toLocaleLowerCase().includes(queryValue) 
-    || book.description.trim().toLowerCase().includes(queryValue) 
-    || book.author.trim().toLowerCase().includes(queryValue) 
-    || book.genre.trim().toLowerCase().includes(queryValue)
-  )
-
-  const filteredBooksByGenre = genre
-    ? filteredBooks.filter(book => book.genre.trim().toLowerCase() === genre.toLowerCase())
-    : filteredBooks;
-
-  return filteredBooksByGenre;
+  return preparedBooks;
 }
 
 function App() {
-  const [sort, setSort] = useState('');
+  const [sort, setSort] = useState("");
   const [reverse, setReverse] = useState(false);
-  const [query, setQuery] = useState('');
-  const [genre, setGenre] = useState('');
+  const [show, setShow] = useState(true);
+
+  const books = getBooks(booksFromServer, sort, reverse);
+
   const [cart, setCart] = useState<Book[]>([]);
-  const [showCart, setShowCart] = useState(false);
-  const [count, setCount] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
-  const [showNewBook, setShowNewBook] = useState(false);
 
-  const books = getBooks(booksFromServer, sort, reverse, query, genre)
-
-  const addToCart = (book: Book) => {
-    setCart(prevCart => [...prevCart ,book]);
-    setCount(count => count + 1);
-    setTotalPrice(totalPrice => totalPrice + book.price)
+  const handleClick = (book: Book) => {
+    setCart([...cart, book])
+    console.log(cart);
   }
 
-  const handleOpenCart = () => {
-    setShowCart(cur => !cur)
-  }
+  const handleChange = (book: Book, d: number) => {
+    const index = cart.indexOf(book);
+    const arr = cart;
 
-  const handleOpenAddNewBook = () => {
-    setShowNewBook(cur => !cur)
-  }
+    arr[index].amount += d;
 
+    if (arr[index].amount === 0) arr[index].amount = 1;
+    setCart([...arr])
+  }  
+
+  useEffect(() => {
+    console.log('cart change');
+  }, [cart])
+  
   return (
     <div className="App">
       <div className="p-12 bg-bgInline rounded-sm">
-        <Header
-          count={count}
-          totalPrice={totalPrice}
-          handleOpenCart={handleOpenCart}
-          handleOpenAddNewBook={handleOpenAddNewBook}
+        <Header 
+          setShow={setShow}
+          size={cart.length}
         />
-        <MainBook 
-          books={books}
-          sort={sort} 
-          setSort={setSort}
-          reverse={reverse}
-          setReverse={setReverse}
-          genre={genre}
-          setGenre={setGenre}
-          query={query}
-          setQuery={setQuery}
-          addToCart={addToCart}
-        />
+        {show ? 
+          (<BookList
+            books={books}
+            handleClick={handleClick}
+          />) : (
+            <Cart 
+              cart={cart}
+              handleChange={handleChange}
+              setCart={setCart} 
+            />
+          )
+        }
       </div>
-
-      {showCart && <CartItems
-        cart={cart}
-        handleOpenCart={handleOpenCart}
-        count={count}
-        setCount={setCount}
-      />}
-
-      {showNewBook && <NewBook 
-        handleOpenAddNewBook={handleOpenAddNewBook}
-      />}
     </div>
   );
 }

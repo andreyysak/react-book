@@ -1,60 +1,29 @@
-import React from 'react'
-import { CiShoppingCart, CiDollar } from "react-icons/ci";
+import React, { Dispatch, SetStateAction } from 'react'
 import { FaBookOpen } from "react-icons/fa";
-import { TiPlus } from "react-icons/ti";
-
+import { FaCartShopping } from "react-icons/fa6";
 
 interface Props {
-  count: number;
-  totalPrice: number;
-  handleOpenCart: () => void;
-  handleOpenAddNewBook: () => void;
+  setShow: Dispatch<SetStateAction<boolean>>;
+  size: number;
 }
 
-export const Header: React.FC<Props> = ({count, totalPrice, handleOpenCart, handleOpenAddNewBook}) => {
+export const Header: React.FC<Props> = ({setShow, size}) => {
   return (
-    <header className='flex justify-between items-center py-10 px-14 bg-white rounded-t-lg font-bold border-b-2'>
-      <figure>
-        <a 
-          href="www.google.com"
-          className='text-2xl flex items-center gap-4'
-        >
-          <FaBookOpen size={34}/>
-          React Book
-        </a>
-      </figure>
-
-      <div className='flex gap-8'>
-        <ul className='flex list-none gap-7 bg-orangeCol text-white py-4 px-6 rounded-full'>
-          <li className='flex gap-2 pr-5 border-r-2'>
-            {totalPrice.toFixed(2)}
-            <CiDollar
-              size={26}
-              style={{ strokeWidth: "1"}}
-            />
-          </li>
-          <button
-            className='flex gap-2'
-            onClick={handleOpenCart}
-          >
-            <label htmlFor="">
-              {count}
-            </label>
-            <CiShoppingCart
-              size={26}
-              style={{ strokeWidth: "1"}}
-            />
-          </button>
-        </ul>
-
-        <button 
-          className='flex list-none gap-3 bg-orangeCol text-white py-4 px-6 rounded-full'
-          onClick={handleOpenAddNewBook}
-        >
-          <TiPlus size={26} />
-          Book
-        </button>
+    <div className='flex justify-between bg-white rounded-t-xl py-10 px-16 border-b-2 border-lightGrayb'>
+      <div className='flex gap-3 items-center cursor-pointer' onClick={() => setShow(true)}>
+        <FaBookOpen size={30} />
+        <h1 className='font-bold text-3xl'>
+          React Books
+        </h1>
       </div>
-    </header>
+      <button
+        onClick={() => setShow(false)}
+        className='px-5 py-2 font-bold bg-orangeCol text-white rounded-full flex items-center gap-3'
+      >
+        <span>{`#${size}`}</span>
+        Cart
+        <FaCartShopping size={20} />
+      </button>
+    </div>
   )
 }
