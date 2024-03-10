@@ -5,9 +5,10 @@ import { GrFormAdd } from "react-icons/gr";
 interface Props {
   book: Book;
   addToCart: (book: Book) => void;
+  onBookClick: (book: Book) => void;
 }
 
-export const BookCard: React.FC<Props> = ({book, addToCart}) => {
+export const BookCard: React.FC<Props> = ({book, addToCart, onBookClick}) => {
   return (
     <li
       key={book.id}
@@ -17,8 +18,9 @@ export const BookCard: React.FC<Props> = ({book, addToCart}) => {
         src={book.imageUrl}
         alt={book.name}
         className='rounded-xl h-[325px]'
+        onClick={() => onBookClick(book)}
       />
-      <h3 className='pt-6 font-bold text-xl text-center'>
+      <h3 className='pt-6 font-bold text-xl text-center' onClick={() => onBookClick(book)}>
         {book.name}
       </h3>
       <div className='flex justify-between items-center pt-3'>

@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import booksFromServer from "./api/books.json";
 import { Book } from "./interface/Books";
 
@@ -11,8 +11,11 @@ function getBooks(
   books: Book[],
   sort: string,
   reverse: boolean,
+  query: string,
+  genre: string,
 ) {
   const preparedBooks = [...books];
+  const queryValue = query.trim().toLowerCase();
 
   if (sort) {
     preparedBooks.sort((book1, book2) => {
@@ -31,15 +34,25 @@ function getBooks(
     preparedBooks.reverse();
   }
 
-  return preparedBooks;
+  const filteredBooks = preparedBooks.filter(book => book.name.trim().toLowerCase().includes(queryValue));
+
+  const filteredBooksByGenre = genre
+    ? filteredBooks.filter(
+        book => book.genre.trim().toLowerCase() === genre.toLowerCase()
+      ) 
+    : filteredBooks;
+
+  return filteredBooksByGenre;
 }
 
 function App() {
   const [sort, setSort] = useState("");
   const [reverse, setReverse] = useState(false);
   const [show, setShow] = useState(true);
+  const [query, setQuery] = useState('');
+  const [genre, setGenre] = useState('');
 
-  const books = getBooks(booksFromServer, sort, reverse);
+  const books = getBooks(booksFromServer, sort, reverse, query, genre);
 
   const [cart, setCart] = useState<Book[]>([]);
 
@@ -68,16 +81,22 @@ function App() {
         <Header 
           setShow={setShow}
           size={cart.length}
+          query={query}
+          setQuery={setQuery}
         />
         {show ? 
           (<BookList
             books={books}
             handleClick={handleClick}
+            setSort={setSort}
+            setReverse={setReverse}
+            setGenre={setGenre}
           />) : (
             <Cart 
               cart={cart}
               handleChange={handleChange}
               setCart={setCart} 
+              setShow={setShow}
             />
           )
         }
