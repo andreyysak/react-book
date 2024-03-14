@@ -108,10 +108,10 @@ export const AddNewBook: React.FC<Props> = React.memo(({ setShowForm, addNewBook
             />
             
             <div className="flex items-center justify-center gap-5 pt-8">
-              <button className="py-3 px-6 border-2 font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light" onClick={() => setShowForm((cur) => !cur)}>
+              <button className="py-3 px-6 border-2 border-darkText dark:border-light font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light hover:text-darkHover dark:hover:text-lightHover duration-200 hover:scale-105 active:text-darkActive dark:active:text-lightActive" onClick={() => setShowForm((cur) => !cur)}>
                 Go back
               </button>
-              <button type="submit" className="py-3 px-6 border-2 font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light">
+              <button type="submit" className="py-3 px-6 border-2 border-darkText dark:border-light font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light hover:text-darkHover dark:hover:text-lightHover duration-200 hover:scale-105 active:text-darkActive dark:active:text-lightActive">
                 Submit
               </button>
             </div>

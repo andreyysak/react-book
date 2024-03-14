@@ -7,6 +7,7 @@ import { BookList } from "./components/BookList";
 import { Cart } from "./components/Cart";
 import { Header } from "./components/Header";
 import { AddNewBook } from "./components/AddNewBook";
+import { APP_STYLE } from "./styles/App";
 
 function getBooks(
   books: Book[],
@@ -95,7 +96,7 @@ function App() {
   
   return (
     <div className="App">
-      <div className="p-12 bg-light dark:bg-darkText sm:p-4 md:p-8 lg:p-10">
+      <div className={APP_STYLE}>
         <div className="border-2 rounded-xl border-darkText dark:border-light">
           <Header
             setShow={setShow}

@@ -165,11 +165,11 @@ export const Cart: React.FC<Props> = React.memo(({
               <div className="flex justify-between pt-10">
                 <button
                   onClick={() => setShow(true)}
-                  className="py-3 px-6 sm:py-2 sm:px-5 border-2 font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light"
+                  className="py-3 px-6 border-2 border-darkText dark:border-light font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light hover:text-darkHover dark:hover:text-lightHover duration-200 hover:scale-105 active:text-darkActive dark:active:text-lightActive"
                 >
                   Go back
                 </button>
-                <button className="py-3 px-6 sm:py-2 sm:px-5 border-2 font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light">
+                <button className="py-3 px-6 border-2 border-darkText dark:border-light font-bold rounded-full bg-light text-darkText dark:bg-darkText dark:text-light hover:text-darkHover dark:hover:text-lightHover duration-200 hover:scale-105 active:text-darkActive dark:active:text-lightActive">
                   Pay now
                 </button>
               </div>
